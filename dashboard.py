@@ -69,7 +69,10 @@ def create_rfm_df(df):
     return rfm_df
 
 # data
-all_df = pd.read_csv(r"c:\文档\Semester 6\Studi Independen DBS\MATERI\Belajar Fundamental Analisis Data\all_data.csv")
+import pandas as pd
+
+url = "https://github.com/artikasaride/Latihan-Dashboard-Streamlit/blob/main/all_data.csv"
+all_df = pd.read_csv(url)
 
 datetime_columns = ["order_date", "delivery_date"]
 all_df.sort_values(by="order_date", inplace=True)
